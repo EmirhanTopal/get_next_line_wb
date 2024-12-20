@@ -6,7 +6,7 @@
 /*   By: emtopal <emtopal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:19:08 by emtopal           #+#    #+#             */
-/*   Updated: 2024/12/20 19:57:45 by emtopal          ###   ########.fr       */
+/*   Updated: 2024/12/20 20:49:09 by emtopal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,6 @@ char	*ft_strchr(const char *s, int c)
 	if ((unsigned char)(c) == '\0')
 		return ((char *)&s[i]);
 	return (NULL);
-}
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*ptr;
-	size_t	i;
-
-	ptr = malloc(count * size);
-	i = 0;
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	while (i < count * size)
-	{
-		((unsigned char *)ptr)[i] = 0;
-		i++;
-	}
-	return (ptr);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
